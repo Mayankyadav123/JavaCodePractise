@@ -1,4 +1,4 @@
-package com.coding.datastructure;
+package com.coding.datastructure.binarySearch;
 
 public class BinarySearch {
 
