@@ -23,7 +23,8 @@ public class BinarySearch {
 	
 	public static void main(String args[]) {
 		int arr[]= {1,12,23,24,35,36,47,58,120};
-		int result=BinarySearch(arr,120);
+		int key=58;
+		int result=BinarySearch(arr,key);
 		System.out.println(result);
 	}
 }

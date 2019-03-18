@@ -24,10 +24,10 @@ public class BinarySearchRecurssion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int arr[]= {1,12,23,24,35,36,47,58,120};
-		int l,h;
-		l = 0;
-		h = arr.length-1;
-		int result=BinarySearch(arr,l,h,35);
+		int l=0; 
+		int h = arr.length-1;
+		int key=35;
+		int result=BinarySearch(arr,l,h,key);
 		System.out.println(result);
 	}
 
