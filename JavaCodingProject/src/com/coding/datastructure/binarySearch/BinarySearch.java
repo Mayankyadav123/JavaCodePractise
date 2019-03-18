@@ -1,5 +1,7 @@
 package com.coding.datastructure.binarySearch;
 
+import java.util.Scanner;
+
 public class BinarySearch {
 
 	public static int BinarySearch(int arr[],int key) {
@@ -22,8 +24,16 @@ public class BinarySearch {
 	}
 	
 	public static void main(String args[]) {
-		int arr[]= {1,12,23,24,35,36,47,58,120};
-		int key=58;
+		//int arr[]= {1,12,23,24,35,36,47,58,120};
+		Scanner in = new Scanner(System.in);
+	    System.out.println("Enter number of elements");
+	    int n = in.nextInt();
+	    int arr[] = new int[n];
+	    System.out.println("Enter " + n + " integers");
+	    for(int i=0;i<n;i++)
+	    	arr[i]=in.nextInt();
+	    System.out.println("Enter value to search");
+		int key=in.nextInt();
 		int result=BinarySearch(arr,key);
 		System.out.println(result);
 	}
