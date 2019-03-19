@@ -1,4 +1,4 @@
-package com.coding.datastructure;
+package com.coding.datastructure.LinkedList;
 
 import org.w3c.dom.Node;
 
