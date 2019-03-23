@@ -3,12 +3,28 @@ package com.coding.datastructure.binarySearch;
 public class BinarySearchRotatedList {
 	
 	public static int bsSearchRotatedList(int[] arr,int key) {
-		
-		return -1;
+		int index=pivotElement(arr);
+		return index;
 	}
 
 	public static int pivotElement(int[] arr) {
-		
+		int l=0;
+		int h=arr.length-1;
+		int mid=0;
+		while(l<=h) {
+			mid=(l+h)/2;
+			if(mid<h && arr[mid]>arr[mid+1]) {
+				return mid;
+			}else if(mid>l&& arr[mid]<arr[mid-1]) {
+				return mid-1;
+			}
+			if(arr[mid]>=arr[l]) {
+				l=mid+1;
+				h=mid-1;
+			}else {
+				h=mid-1;
+			}
+		}
 		return -1;
 	}
 	
