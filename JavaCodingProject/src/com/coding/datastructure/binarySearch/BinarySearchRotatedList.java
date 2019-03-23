@@ -20,7 +20,6 @@ public class BinarySearchRotatedList {
 			}
 			if(arr[mid]>=arr[l]) {
 				l=mid+1;
-				h=mid-1;
 			}else {
 				h=mid-1;
 			}
