@@ -1,4 +1,4 @@
-package com.coding.threading;
+package com.coding.Multithreading;
 
 public class EvenOddUsing2Thread {
 

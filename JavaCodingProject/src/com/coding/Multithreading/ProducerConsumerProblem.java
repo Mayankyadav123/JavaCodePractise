@@ -1,4 +1,4 @@
-package com.coding.threading;
+package com.coding.Multithreading;
 
 import java.util.LinkedList;
 
@@ -53,7 +53,7 @@ public class ProducerConsumerProblem {
 				//only one thread can access at a time
 				synchronized (this) {
 					//wait if full
-					while(sharedList.size()==capacity) {
+					if(sharedList.size()==capacity) {
 						try {
 							wait();
 						} catch (InterruptedException e) {
@@ -73,7 +73,7 @@ public class ProducerConsumerProblem {
 			while(true) {
 				synchronized (this) {
 					//wait if empty
-					while(sharedList.size()==0) {
+					if(sharedList.size()==0) {
 						try {
 							wait();
 						} catch (InterruptedException e) {
