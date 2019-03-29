@@ -8,7 +8,7 @@ public class BinarySearch {
 		int l=0;
 		int h=arr.length-1;
 		int mid=0;
-		while(l<h) {
+		while(l<=h) {
 		mid=(l+h)/2;
 		if(arr[mid]==key) {
 			return mid;
