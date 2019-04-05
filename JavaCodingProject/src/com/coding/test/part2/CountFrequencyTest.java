@@ -1,4 +1,4 @@
-package com.coding.datastructure.LinkedList;
+package com.coding.test.part2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ public class CountFrequencyTest {
         char[] strArray = s.toCharArray();
       
         for(char ch='a';ch<='z';ch++) {
-        	frequencyMap.put(ch, 0); 
+        	frequencyMap.put(ch, 0);         	
         }
         for (char c : strArray) { 
             if (frequencyMap.containsKey(c)) { 
@@ -21,9 +21,15 @@ public class CountFrequencyTest {
             	frequencyMap.put(c, 1); 
             } 
         } 
+        System.out.println("{");
         for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) { 
-            System.out.println(entry.getKey() + ":" + entry.getValue()); 
+        	if(entry.getKey()=='z') {
+                System.out.println(entry.getKey() + ":" + entry.getValue()); 
+        	}else {
+            System.out.println(entry.getKey() + ":" + entry.getValue()+",");
+        	}
         } 
+        System.out.println("}");
 	}
 	
 	public static void main(String[] args) {
@@ -32,6 +38,7 @@ public class CountFrequencyTest {
 		String s=in.next();
 		String input=s.replaceAll("[^a-zA-Z]","");
 		frequency(input.toLowerCase());
+		in.close();
 	}
 
 }

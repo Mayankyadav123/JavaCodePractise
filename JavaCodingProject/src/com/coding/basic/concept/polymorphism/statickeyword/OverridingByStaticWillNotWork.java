@@ -10,10 +10,12 @@ public class OverridingByStaticWillNotWork {
 		c.display();
 		c.parentwithStatic();
 		c.childwithStatic();
+		c.overload();
 		//if we make reference of child then static of child is considered
 		Child c1=new Child();
 		c1.print();
 		c1.display();
+		c1.overload(10);
 		//this will give compilation error
 		//because non-static method of child cannot override static method of parent class 
 		
@@ -43,6 +45,10 @@ class Parent {
 	public  void childwithStatic() {
 		System.out.println("static or class method of parent is called :childwithStatic" );
 	}
+	
+	public void overload() {
+		System.out.println("parent overload called");
+	}
 }
 
 class Child extends Parent{
@@ -56,7 +62,9 @@ class Child extends Parent{
 	public void print() {
 		System.out.println("child print called");
 	}
-	
+	public void overload(int a) {
+		System.out.println("child overload called");
+	}
 	
 	public void parentwithStatic() {
 		System.out.println("static or class method of child is called :parentwithStatic" );

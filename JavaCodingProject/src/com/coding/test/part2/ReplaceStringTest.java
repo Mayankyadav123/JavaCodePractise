@@ -1,4 +1,4 @@
-package com.coding.datastructure.LinkedList;
+package com.coding.test.part2;
 
 import java.util.Scanner;
 
@@ -27,6 +27,7 @@ public class ReplaceStringTest {
 		String s=in.next();
 		String result=replace(s);
 		System.out.println(result);
+		in.close();
 	}
 
 }

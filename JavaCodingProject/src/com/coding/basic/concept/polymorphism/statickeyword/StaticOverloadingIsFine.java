@@ -5,7 +5,7 @@ public class StaticOverloadingIsFine {
 	public static void foo() {
 		System.out.println("StaticOverloadingIsFine.foo() called");
 	}
-	//parameter or return type must be different
+	//parameter must be different
 	public static void foo(int a) {
 		System.out.println("StaticOverloadingIsFine.foo(int) called:"+a);
 	}
