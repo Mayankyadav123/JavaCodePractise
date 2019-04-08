@@ -9,14 +9,11 @@ public class ReplaceStringTest {
 		
 		for(int i=0;i<s.length();i++) {
 			int val=s.charAt(i);
-			System.out.println(val);
 			int newVal=val+25;
 			if(newVal>122) {
 				newVal=122-val+97;
 			}
 			newString+=(char)(newVal);
-			System.out.println(newVal);
-			System.out.println((char)(newVal));
 		}
 		return newString;
 	}
