@@ -1,10 +1,11 @@
 package com.coding.test;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class Jungle {
 
-	private static HashMap<Animal,Integer> animalMap=new HashMap<Animal, Integer>();
+	private static HashMap<String,List<Animal>> animalMap=new HashMap<String,List<Animal>>();
 	
 	public static void checkType(Object obj) {
 		
@@ -25,10 +26,9 @@ public class Jungle {
 		m.makeSound();
 		m.currentEnergyLevel();
 		s.currentEnergyLevel();
-		animalMap.put(s, 1);
-		animalMap.put(s1, 2);
-		animalMap.put(s, 2);
-		System.out.println(animalMap.toString());
+		animalMap.put("Snakes", (List<Animal>) s);
+		
+		System.out.println(animalMap.toString()); 
 
 
 	}
