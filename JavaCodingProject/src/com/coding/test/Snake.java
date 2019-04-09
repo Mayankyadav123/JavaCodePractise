@@ -1,12 +1,13 @@
 package com.coding.test;
 
 public class Snake extends Animal{
-	private int sEnergy;
 
-	public Snake(int sEnergy) {
-		super();
-		this.sEnergy = sEnergy;
+	@Override
+	public String toString() {
+		return "Snake [energy=" + energy + ", makeSound()=" + makeSound() + ", eatFood()=" + eatFood() + ", sleep()="
+				+ sleep() + ", currentEnergyLevel()=" + currentEnergyLevel() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
-	
+
 
 }

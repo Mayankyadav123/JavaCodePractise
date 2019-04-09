@@ -1,19 +1,27 @@
 package com.coding.test;
 
 abstract class Animal {
-	String animalType="";
-	int animalCount=0;
-	
-	 public int makeSound(int energy) {
-		System.out.println("Animal make sound");
-		return energy-3;
+	 public int energy;
+	 public int makeSound() {
+		System.out.println("Default: make sound");
+		energy=energy-3;
+		return energy;
 	}
-	 public int eatFood(int energy) {
-		System.out.println("Animal eat food");
-		return energy+5;
+	 public int eatFood() {
+		System.out.println("Default: eat food");
+		energy=energy+5;
+		return energy;
 	}
-	 public int sleep(int energy) {
-		System.out.println("Animal make sound");
-		return energy+10;
+	 public int sleep() {
+		System.out.println("Default: sleep");
+		energy=energy+10;
+		return energy;
 	}
+	 public int currentEnergyLevel() {
+		 System.out.println(energy);
+		 return energy;
+	 }
+	 
 }
+
+

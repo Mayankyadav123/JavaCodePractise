@@ -1,24 +1,21 @@
 package com.coding.test;
 
 public class Tiger extends Animal {
-	private int tEnergy;
 
-	public Tiger(int tEnergy) {
-		super();
-		this.tEnergy = tEnergy;
-	}
-
-	public int sleep(int energy) {
-		tEnergy=energy+5;
-		return tEnergy;
+	public int sleep() {
+		System.out.println("Tiger Sleep");
+		energy=energy+5;
+		return energy;
 	}
 	
-	public int eatFood(String foodType,int energy) {
-		if(!foodType.equalsIgnoreCase("grain")) {
-			tEnergy=energy+5;
+	
+	public void eatFood(String food) {
+		if(!food.equalsIgnoreCase(Food.grain.toString())) {
+			System.out.println("Tiger eatFood");
+			energy=energy+5;
 		}else {
 			System.out.println("can't eat: sensitive digestion");
 		}
-		return tEnergy;
 	}
+
 }
