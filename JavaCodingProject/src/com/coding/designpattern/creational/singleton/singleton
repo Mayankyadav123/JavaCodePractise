@@ -1,0 +1,29 @@
+Singleton
+
+//one and only instance of class
+//a global single point of access
+/*
+ * Contains
+ * private constructor
+ * private instance
+ * public method to access
+ * */
+  1.  Eager initialization: instance of a class is created long before it is
+   actually required
+   
+  2.  Lazy initialization: instance of a class is created when the client sends
+   a request
+   
+  3.  Static block initialization: is similar to eager initialization, except 
+  that the instance of the class is created in the static block that provides 
+  the option for exception handling
+  
+  4.  Thread safe singleton: is to make the global access method is synchronized 
+  so that only one thread can execute this method at a time
+  
+  5.  Bill Pugh singleton: implementation using the static inner helper class. 
+  Static inner classes are not loaded into memory until their getInstance() 
+  methods are called
+  
+  6.  Enum singleton: provides implicit support for thread safety and only one 
+  instance is guaranteed
