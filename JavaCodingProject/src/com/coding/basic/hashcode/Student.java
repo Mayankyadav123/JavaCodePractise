@@ -4,6 +4,14 @@ public class Student {
 
 	private int id;
 	private String name;
+	private int rollno;
+	private boolean flag;
+	public int getRollno() {
+		return rollno;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
 	public int getId() {
 		return id;
 	}
@@ -26,8 +34,10 @@ public class Student {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + (flag ? 1231 : 1237);
 		result = prime * result + id;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + rollno;
 		return result;
 	}
 	@Override
@@ -39,12 +49,16 @@ public class Student {
 		if (getClass() != obj.getClass())
 			return false;
 		Student other = (Student) obj;
+		if (flag != other.flag)
+			return false;
 		if (id != other.id)
 			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
+			return false;
+		if (rollno != other.rollno)
 			return false;
 		return true;
 	}
