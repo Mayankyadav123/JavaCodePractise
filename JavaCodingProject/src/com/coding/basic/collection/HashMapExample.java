@@ -21,7 +21,11 @@ public class HashMapExample {
 	    }
 	    for (String i : capitalCities.keySet()) {
 	    	  System.out.println("key: " + i + " value: " + capitalCities.get(i));
-	    	}
+	    }
+	    
+	    capitalCities.forEach((k, v) -> {
+	    	System.out.println("key : " + k + ", value : " + v);
+	    });
 	}
 
 }

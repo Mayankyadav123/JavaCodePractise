@@ -1,5 +1,12 @@
 package com.coding.basic.concept.polymorphism.statickeyword;
 
+/**
+ * Static overloading is allowed
+ * for overloading we must have same name and different parameter(different type or, different number or both)
+ * we can't have overloading by changing return type
+ * @author DELL
+ *
+ */
 public class StaticOverloadingIsFine {
 
 	public static void foo() {
@@ -29,7 +36,9 @@ public class StaticOverloadingIsFine {
 		// TODO Auto-generated method stub
 		StaticOverloadingIsFine.foo();
 		StaticOverloadingIsFine.foo(10);
-
+		
+		StaticOverloadingIsFine obj = new StaticOverloadingIsFine();
+		obj.sum(3);
 	}
 
 }

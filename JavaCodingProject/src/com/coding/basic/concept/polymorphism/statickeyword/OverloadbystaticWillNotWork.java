@@ -22,5 +22,7 @@ public class OverloadbystaticWillNotWork {
 	
 	public static void main(String args[]) {
 		OverloadbystaticWillNotWork.foo();
+		OverloadbystaticWillNotWork obj= new OverloadbystaticWillNotWork();
+		obj.foo();
 	}
 }

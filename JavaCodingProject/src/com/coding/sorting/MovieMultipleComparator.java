@@ -1,7 +1,7 @@
 package com.coding.sorting;
 
 import java.util.Comparator;
-
+// multiple compare on 2 objects
 public class MovieMultipleComparator implements Comparator<Movie>{
 
 	//first compare by name if no difference then compare by 

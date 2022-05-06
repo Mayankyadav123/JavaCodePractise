@@ -1,5 +1,7 @@
 package com.coding.datastructure.binarySearch;
 
+import java.util.Scanner;
+
 public class BinarySearchRepeatedElement {
 
 	public static int bs(int[] arr,int key,boolean searchfirst) {
@@ -28,10 +30,15 @@ public class BinarySearchRepeatedElement {
 	
 	public static void main(String args[]) {
 		int arr[]= {1,2,2,4,5,6,6,6,8,8,10,11};
-		int key=6;
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the value to search");
+		int key=in.nextInt();
 		int first=bs(arr,key,true);
 		int last=bs(arr,key,false);
-		int count=last-first+1;
+		int count = 0;
+		if(first>0 && last>0) {
+		count=last-first+1;			
+		}
 		System.out.println("total count of "+key+":"+count);
 	}
 }

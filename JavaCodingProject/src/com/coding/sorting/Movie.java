@@ -1,6 +1,7 @@
 package com.coding.sorting;
 
 // compares with "this" 
+// Single compare on same object
 public class Movie implements Comparable<Movie>{
 
 	private double rating;

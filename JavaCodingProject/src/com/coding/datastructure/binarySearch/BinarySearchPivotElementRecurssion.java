@@ -11,7 +11,7 @@ public class BinarySearchPivotElementRecurssion {
 //			return l;
 //		}
 		if(mid<h && arr[mid]>arr[mid+1]) {
-			return mid;
+			return mid+1;
 		}
 		if(mid>l && arr[mid]<arr[mid-1]) {
 			return mid-1;
