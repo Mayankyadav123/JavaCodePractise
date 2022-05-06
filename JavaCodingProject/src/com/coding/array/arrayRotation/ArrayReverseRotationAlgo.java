@@ -1,6 +1,6 @@
 package com.coding.array.arrayRotation;
 import java.util.Scanner;
-//Best for reversal
+// Best for reversal
 public class ArrayReverseRotationAlgo {
 	
 	private static void reverse(int arr[], int start, int end) {
