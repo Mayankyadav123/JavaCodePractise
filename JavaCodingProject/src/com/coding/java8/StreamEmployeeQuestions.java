@@ -78,6 +78,28 @@ public class StreamEmployeeQuestions {
 //			        .get(1);
 
 
+		//6. Average salary 
+		Double avgSalary=empList.stream().collect(Collectors.averagingInt(Employee::getSalary));
+		System.out.println("***Average salary****"+avgSalary);
+		
+		//7. Average salary by dept
+		
+		Map<String,Double> avgSalBydept = empList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.averagingDouble(Employee::getSalary)));
+		
+		System.out.println("***Average salary by dept****"+avgSalBydept);
+
+		
+		//8. find count of employee by age more than 30
+		
+		Map<Boolean,Long> map =  empList.stream().collect(Collectors.partitioningBy(obj -> obj.getAge() > 30,Collectors.counting()));
+		
+		map.entrySet().forEach(obj-> System.out.println("-----count of employee------"+obj.getKey()+":"+obj.getValue()));
+		
+		
+		//9. Department names
+		List<String> dptList=empList.stream().map(Employee::getDepartment).distinct().collect(Collectors.toList());
+		
+		dptList.forEach(obj-> System.out.println("====="+obj.toString()));
 	}
 
 }
