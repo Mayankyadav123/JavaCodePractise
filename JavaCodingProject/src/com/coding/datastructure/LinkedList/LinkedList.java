@@ -9,7 +9,7 @@ public class LinkedList {
 		Node next;
 		int data;
 		Node(int data){
-			data=data;
+			this.data=data;
 		}
 		@Override
 		public String toString() {
