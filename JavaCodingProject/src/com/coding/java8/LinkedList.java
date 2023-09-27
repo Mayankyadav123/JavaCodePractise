@@ -87,6 +87,17 @@ public class LinkedList {
 		list.add(111); //using add method is better as it adds in expected order first element in first
 		System.out.println(list.getFirst());
 		list.stream().forEach(System.out::println);
+		
+		
+		// Search particular element
+		
+		// add element on particular node
+		
+		// find middle element
+		
+		// Search element in infinite linked list
+		
+		
 	}
 
 }
