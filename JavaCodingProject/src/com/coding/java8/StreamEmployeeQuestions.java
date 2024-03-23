@@ -121,6 +121,13 @@ public class StreamEmployeeQuestions {
 		List<String> dptList=empList.stream().map(Employee::getDepartment).distinct().collect(Collectors.toList());
 		
 		dptList.forEach(obj-> System.out.println("====="+obj.toString()));
+		
+		
+		List<Integer> arr = Arrays.asList(1,0,1,0,0,0,1);
+		
+		arr.sort((o1, o2) -> o1 - o2);
+		
+		System.out.println(arr.toString());
 	}
 
 }

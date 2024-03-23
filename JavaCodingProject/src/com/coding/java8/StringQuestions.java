@@ -155,7 +155,7 @@ public class StringQuestions {
 		
 		Map<String,Long> result1=Arrays.stream(str.split("")).map(String::toLowerCase).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()));
 		
-		
+				
 		// Find element position/index in a sorted array
 		int arr[]= {1,12,23,24,35,36,47,58,120};
 		int position = binarySearch(arr,0,arr.length-1,23);
