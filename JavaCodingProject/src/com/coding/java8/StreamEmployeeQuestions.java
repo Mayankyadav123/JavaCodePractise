@@ -128,6 +128,11 @@ public class StreamEmployeeQuestions {
 		// or after sort add Collections.sort(empList,Collections.reverseOrder());
 		System.out.println(empList);
 		
+		List<Integer> arr = Arrays.asList(1,0,1,0,0,0,1);
+		
+		arr.sort((o1, o2) -> o1 - o2);
+		
+		System.out.println(arr.toString());
 	}
 
 }
