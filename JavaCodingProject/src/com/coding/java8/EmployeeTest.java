@@ -40,7 +40,7 @@ public class EmployeeTest {
 		
 		maxsalbydept.entrySet().forEach(obj->System.out.println(obj.getKey()+":"+obj.getValue()));
 		
-		// Find employee with Max salary by Department // map with Object and Optiona::get
+		// Find employee with Max salary by Department // map with Object and Optional::get
 		Map<String,Object> maxsalempbydept = empList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Employee::getSalary)),Optional::get)));
 		maxsalempbydept.entrySet().forEach(obj->System.out.println(obj.getKey()+":"+obj.getValue()));
 		
@@ -87,6 +87,12 @@ public class EmployeeTest {
 		
 		System.out.println(deptNames.toString());
 		System.out.println(deptNames1.toString());
+		
+		// Convert list to Map
+        Map<Integer, String> result3 = empList.stream().collect(
+                Collectors.toMap(x -> x.getEmpId(), x -> x.getName()));
+        
+        System.out.println(result3);
 	}
 
 }

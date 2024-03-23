@@ -2,7 +2,7 @@ package com.coding.Multithreading;
 
 public class Deadlock {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		final Object resource1= new Object();
 		final Object resource2= new Object();
@@ -49,7 +49,7 @@ public class Deadlock {
 		});
 		t1.start();
 		t2.start();
-		
+
 	}
 }
 

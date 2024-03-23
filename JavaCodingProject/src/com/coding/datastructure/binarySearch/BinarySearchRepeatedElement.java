@@ -9,11 +9,13 @@ public class BinarySearchRepeatedElement {
 		int l=0;
 		int h=arr.length-1;
 		while(l<=h) {
+			System.out.println("***Low:"+l+" High :"+h);
 			int mid=(l+h)/2;
 			if(arr[mid]==key) {
 				result=mid;
 				if(searchfirst) {
 					h=mid-1;
+					System.out.println("===="+h);
 				}else {
 					l=mid+1;
 				}

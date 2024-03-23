@@ -48,7 +48,7 @@ public class PcDemo {
 		int capacity=3;
 		
 		public void produce() throws InterruptedException {
-			int value=0;
+			int value=1;
 			while(true) {
 				synchronized (this) {
 					while(sharedList.size()==capacity) {

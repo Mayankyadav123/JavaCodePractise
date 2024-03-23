@@ -21,7 +21,7 @@ public class OddEvenThreadCompletableFuture {
                                             System.out.println("Thread Name " + Thread.currentThread().getName() + " : " + x);
                                         }
                                         try {
-											Thread.currentThread().sleep(1000);
+											Thread.currentThread().sleep(100);
 											//Thread.sleep(1000);
 										} catch (InterruptedException e) {
 											// TODO Auto-generated catch block

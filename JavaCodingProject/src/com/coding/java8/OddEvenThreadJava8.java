@@ -44,7 +44,7 @@ public class OddEvenThreadJava8 {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		OddEvenThreadJava8 ed = new OddEvenThreadJava8();
-		ed.odd=true;
+		ed.odd=true; //start with odd number
 		Thread t1 = new Thread(new Runnable() {
 
 			@Override

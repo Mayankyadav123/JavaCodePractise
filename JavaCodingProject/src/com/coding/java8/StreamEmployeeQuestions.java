@@ -121,6 +121,13 @@ public class StreamEmployeeQuestions {
 		List<String> dptList=empList.stream().map(Employee::getDepartment).distinct().collect(Collectors.toList());
 		
 		dptList.forEach(obj-> System.out.println("====="+obj.toString()));
+		
+		
+		//10 . Sort by salary in descending order using old method
+		empList.sort(Comparator.comparingInt(e->((Employee) e).getSalary()).reversed());
+		// or after sort add Collections.sort(empList,Collections.reverseOrder());
+		System.out.println(empList);
+		
 	}
 
 }

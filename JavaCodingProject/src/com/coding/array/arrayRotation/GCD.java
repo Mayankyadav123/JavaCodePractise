@@ -29,5 +29,9 @@ public class GCD {
         a = 31; b = 2; 
         g = gcd(a, b); 
         System.out.println("GCD(" + a +  " , " + b+ ") = " + g); 
+        
+        a = 54; b = 24; 
+        g = gcd(a, b); 
+        System.out.println("GCD(" + a +  " , " + b+ ") = " + g); 
 	}
 }
